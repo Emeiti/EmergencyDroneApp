@@ -7,6 +7,7 @@ import './src/firebase/config';
 
 const Stack = createStackNavigator();
 
+// Emergency Drone Service App - Main Component
 export default function App() {
   return (
     <NavigationContainer>

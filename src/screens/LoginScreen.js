@@ -21,7 +21,7 @@ export default function LoginScreen({ navigation }) {
       console.log('Attempting login with:', email); // Debug log
       const response = await signInWithEmailAndPassword(auth, email, password);
       console.log('Login successful:', response.user.email);
-      navigation.replace('Home');
+      navigation.replace('Chat');
     } catch (error) {
       console.error('Login error:', error); // Debug log
       Alert.alert('Error', error.message);
@@ -46,7 +46,7 @@ export default function LoginScreen({ navigation }) {
       console.log('Attempting signup with:', email);
       const response = await createUserWithEmailAndPassword(auth, email, password);
       console.log('Signup successful:', response.user.email);
-      navigation.replace('Home');
+      navigation.replace('Chat');
     } catch (error) {
       console.error('Signup error:', error);
       setError(error.message);
